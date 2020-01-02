@@ -1,5 +1,5 @@
 <p align="center">
-    <img alt="logo" src="https://img.yzcdn.cn/vant/logo.png" width="120" style="margin-bottom: 10px;">
+    <img alt="logo" src="docs/assets/logo.png" width="120" style="margin-bottom: 10px;">
 </p>
 <h3 align="center" style="margin: 30px 0 35px;">一个基于vue和element-ui的业务工具包</h3>
 
