@@ -8,9 +8,7 @@
 
 ### 特性
 
-* 60+ 高质量组件
-* 90% 单元测试覆盖率
-* 完善的中英文文档和示例
+* 完善的中文文档和示例
 * 支持按需引入
 * 支持主题定制
 * 支持国际化
@@ -35,7 +33,7 @@
 
 * [意见反馈](https://github.com/jczzq/mone/issues)
 * [更新日志](#/zh-CN/changelog)
-* [Mone 示例仓库](https://github.com/jczzq/mone-demo)
+<!-- * [Mone 示例仓库](https://github.com/jczzq/mone-demo) -->
 
 ### 开源协议
 

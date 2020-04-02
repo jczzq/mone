@@ -7,11 +7,7 @@ export default {
   delete: '删除',
   complete: '完成',
   loading: '加载中...',
-  telEmpty: '请填写电话',
-  nameEmpty: '请填写姓名',
-  confirmDelete: '确定要删除么',
-  telInvalid: '请填写正确的电话',
-  vanCalendar: {
+  moneCalendar: {
     end: '结束',
     start: '开始',
     title: '日期选择',
@@ -19,34 +15,34 @@ export default {
     weekdays: ['日', '一', '二', '三', '四', '五', '六'],
     monthTitle: (year: number, month: number) => `${year}年${month}月`
   },
-  vanContactCard: {
+  moneContactCard: {
     addText: '添加联系人'
   },
-  vanContactList: {
+  moneContactList: {
     addText: '新建联系人'
   },
-  vanPagination: {
+  monePagination: {
     prev: '上一页',
     next: '下一页'
   },
-  vanPullRefresh: {
+  monePullRefresh: {
     pulling: '下拉即可刷新...',
     loosing: '释放即可刷新...'
   },
-  vanSubmitBar: {
+  moneSubmitBar: {
     label: '合计：'
   },
-  vanCoupon: {
+  moneCoupon: {
     unlimited: '无使用门槛',
     discount: (discount: number) => `${discount}折`,
     condition: (condition: number) => `满${condition}元可用`
   },
-  vanCouponCell: {
+  moneCouponCell: {
     title: '优惠券',
     tips: '使用优惠',
     count: (count: number) => `${count}张可用`
   },
-  vanCouponList: {
+  moneCouponList: {
     empty: '暂无优惠券',
     exchange: '兑换',
     close: '不使用优惠券',
@@ -54,7 +50,7 @@ export default {
     disabled: '不可用',
     placeholder: '请输入优惠码'
   },
-  vanAddressEdit: {
+  moneAddressEdit: {
     area: '地区',
     postal: '邮政编码',
     areaEmpty: '请选择地区',
@@ -65,11 +61,11 @@ export default {
     namePlaceholder: '收货人姓名',
     areaPlaceholder: '选择省 / 市 / 区'
   },
-  vanAddressEditDetail: {
+  moneAddressEditDetail: {
     label: '详细地址',
     placeholder: '街道门牌、楼层房间号等信息'
   },
-  vanAddressList: {
+  moneAddressList: {
     add: '新增地址'
   }
 };
