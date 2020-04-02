@@ -1,5 +1,5 @@
 <p align="center">
-    <img alt="logo" src="docs/assets/logo.png" width="120" style="margin-bottom: 10px;">
+    <img alt="mone logo" src="docs/assets/logo.png" width="120" style="margin-bottom: 10px;">
 </p>
 <h3 align="center" style="margin: 30px 0 35px;">常用组件、公共样式、工具函数</h3>
 
@@ -41,12 +41,6 @@ mone 也支持按需引入、CDN 引入等方式，详细说明见 [快速上手
 
 - [详细文档](https://jczzq.github.io/mone)
 - [更新日志](https://jczzq.github.io/mone#/zh-CN/changelog)
-
-## 微信讨论群
-
-欢迎大家加入 Mone 交流群一起讨论，添加下方微信并注明『加入 Mone 交流群』即可
-
-<img src="https://i.loli.net/2020/01/02/23lcaKiNOkrJ5BQ.jpg" width="240" height="240" >
 
 ## 开源协议
 
