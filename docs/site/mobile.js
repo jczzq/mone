@@ -92,33 +92,5 @@ Locale.add({
     loadingStatus: '加载状态',
     usernamePlaceholder: '请输入用户名',
     passwordPlaceholder: '请输入密码'
-  },
-  'en-US': {
-    add: 'Add',
-    decrease: 'Decrease',
-    red: 'Red',
-    orange: 'Orange',
-    yellow: 'Yellow',
-    purple: 'Purple',
-    tab: 'Tab',
-    tag: 'Tag',
-    desc: 'Description',
-    back: 'Back',
-    title: 'Title',
-    status: 'Status',
-    button: 'Button',
-    option: 'Option',
-    search: 'Search',
-    content: 'Content',
-    custom: 'Custom',
-    username: 'Username',
-    password: 'Password',
-    loadingStatus: 'Loading',
-    disabled: 'Disabled',
-    uneditable: 'Uneditable',
-    basicUsage: 'Basic Usage',
-    advancedUsage: 'Advanced Usage',
-    usernamePlaceholder: 'Username',
-    passwordPlaceholder: 'Password'
   }
 });

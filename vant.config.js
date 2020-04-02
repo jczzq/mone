@@ -65,6 +65,10 @@ module.exports = {
               {
                 path: 'locale',
                 title: '国际化'
+              },
+              {
+                path: 'style',
+                title: '公共样式'
               }
             ]
           },
@@ -85,38 +89,6 @@ module.exports = {
               {
                 path: 'address-edit',
                 title: 'AddressEdit 地址编辑'
-              },
-              {
-                path: 'address-list',
-                title: 'AddressList 地址列表'
-              },
-              {
-                path: 'area',
-                title: 'Area 省市区选择'
-              },
-              {
-                path: 'card',
-                title: 'Card 商品卡片'
-              },
-              {
-                path: 'contact-card',
-                title: 'Contact 联系人'
-              },
-              {
-                path: 'coupon-list',
-                title: 'Coupon 优惠券'
-              },
-              {
-                path: 'goods-action',
-                title: 'GoodsAction 商品导航'
-              },
-              {
-                path: 'submit-bar',
-                title: 'SubmitBar 提交订单栏'
-              },
-              {
-                path: 'sku',
-                title: 'Sku 商品规格'
               }
             ]
           }

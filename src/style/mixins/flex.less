@@ -1,0 +1,13 @@
+.flex(@a,@b) {
+  justify-content: @a;
+  -webkit-justify-content: @a;
+  align-items: @b;
+  -webkit-align-items: @b;
+}
+
+.flex-percentge(@a) {
+  -webkit-flex: 1 1 @a;
+  flex: 1 1 @a;
+  max-width: @a;
+  max-height: 100%;
+}
