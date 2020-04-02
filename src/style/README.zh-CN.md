@@ -76,20 +76,24 @@ Mone 中默认包含了一些常用样式，可以直接通过 className 的方�
 
 ### Flex
 
-封装了flex，支持`mone-flex-row`横向布局和`mone-flex-column`纵向布局，每一种布局分别支持 `start` `end` `space-between` `space-around` `center` `strtech` 6种布局组合。
+封装了基础 flex 样式，支持`mone-flex-row`横向布局和`mone-flex-column`纵向布局，每一种布局分别支持 `start` `end` `space-between` `space-around` `center` `strtech` 6种布局组合；另外支持 `mone-flex-per-10` `mone-flex-per-20` `mone-flex-per-30` `mone-flex-per-40` `mone-flex-per-50` `mone-flex-per-33` 6种空间占比。
 
 ```html
 <!-- 横向布局 -->
-<p class="mone-flex-row space-between_center m-b-5">
-  <span class="mone-flex-row center_center small bgc-black tc-white">1</span>
-  <span class="blue-block mone-flex-4">2</span>
-  <span class="blue-block">3</span>
+<p class="mone-flex-row space-between_center m-b-5 tc-white">
+  <span class="blue-block small">80px*80px</span>
+  <span class="blue-block mone-flex-per-40">40%*100px</span>
+  <span class="blue-block">
+    <span style="width: 100%; height: 100%" class="mone-flex-row center_center">
+      居中
+    </span>
+  </span>
 </p>
 
 <!-- 纵向布局 -->
-<p class="mone-flex-column space-between_center" style="height: 300px">
-  <span class="blue-block">1</span>
-  <span class="mone-flex-row center_center small bgc-primary">2</span>
-  <span class="blue-block">3</span>
+<p class="mone-flex-column space-between_center tc-white" style="height: 300px">
+  <span class="blue-block small">80px*80px</span>
+  <span class="blue-block small">80px*80px</span>
+  <span class="blue-block">100px*100px</span>
 </p>
 ```

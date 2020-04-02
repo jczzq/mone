@@ -27,16 +27,20 @@
     <demo-block title="Flex">
       <div class="bgc-white p-3">
         <p class="m-b-3">横向布局</p>
-        <p class="mone-flex-row space-between_center m-b-5">
-          <span class="blue-block small">1</span>
-          <span class="blue-block mone-flex--4">40%</span>
-          <span class="mone-flex-row center_center bgc-black tc-white">居中</span>
+        <p class="mone-flex-row space-between_center m-b-5 tc-white">
+          <span class="blue-block small">80px*80px</span>
+          <span class="blue-block mone-flex-per-40">40%*100px</span>
+          <span class="blue-block">
+            <span style="width: 100%; height: 100%" class="mone-flex-row center_center">
+              居中
+            </span>
+          </span>
         </p>
         <p class="m-b-3 word-break-all">纵向布局</p>
-        <p class="mone-flex-column space-between_center" style="height: 300px">
-          <span class="blue-block">1</span>
-          <span class="mone-flex-row center_center small bgc-primary">2</span>
-          <span class="blue-block">3</span>
+        <p class="mone-flex-column space-between_center tc-white" style="height: 300px">
+          <span class="blue-block small">80px*80px</span>
+          <span class="blue-block small">80px*80px</span>
+          <span class="blue-block">100px*100px</span>
         </p>
       </div>
     </demo-block>
@@ -133,7 +137,7 @@ export default {
   border-radius: 3px;
 }
 .small {
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
 }
 </style>
