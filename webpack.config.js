@@ -4,6 +4,9 @@ module.exports = function() {
   }
 
   return {
+    devServer: {
+      port: 9000
+    },
     entry: {
       'site-mobile': ['./docs/site/mobile']
     }

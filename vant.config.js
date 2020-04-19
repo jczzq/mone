@@ -10,7 +10,7 @@ module.exports = {
     }
   },
   site: {
-    defaultLang: 'en-US',
+    defaultLang: 'zh-CN',
     versions: [{ label: '1.x', link: 'https://jczzq.github.io/mone/1.x/' }],
     baiduAnalytics: {
       seed: 'ad6b5732c36321f2dafed737ac2da92f'

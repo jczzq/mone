@@ -8,9 +8,7 @@
   "typings": "types/index.d.ts",
   "files": [
     "es",
-    "lib",
-    "types",
-    "vetur"
+    "lib"
   ],
   "scripts": {
     "dev": "vant-cli dev",
@@ -46,7 +44,8 @@
       "@vant"
     ],
     "rules": {
-      "linebreak-style": 0
+      "linebreak-style": 0,
+      "comma-dangle": 0
     }
   },
   "stylelint": {
