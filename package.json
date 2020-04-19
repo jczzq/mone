@@ -54,9 +54,11 @@
     ]
   },
   "prettier": {
-    "singleQuote": true
+    "singleQuote": true,
+    "printWidth": 120
   },
   "browserslist": [
+    "IE 10",
     "Android >= 4.0",
     "iOS >= 7"
   ],

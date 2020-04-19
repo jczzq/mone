@@ -35,7 +35,7 @@ export default {
   },
   methods: {
     alert() {
-      window.alert('ε=(´ο｀*)))');
+      console.log('ε=(´ο｀*)))');
     }
   }
 };

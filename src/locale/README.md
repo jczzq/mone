@@ -1,12 +1,12 @@
-# Internationalization
+# 国际化
 
-### Intro
+### 介绍
 
-The default language of Mone is Chinese. If you want to use other languages, you can follow the instructions below.
+Mone 默认采用中文作为语言，如果需要使用其他语言，可以参考下面的方案
 
-### Switch languages
+### 多语言切换
 
-Mone supports multiple languages with the Locale component, and the `Locale.use` method allows you to switch to different languages.
+Mone 通过 Locale 组件实现多语言支持，使用 `Locale.use` 方法可以切换当前使用的语言。
 
 ```js
 import { Locale } from 'mone';
@@ -15,17 +15,17 @@ import enUS from 'mone/lib/locale/lang/en-US';
 Locale.use('en-US', enUS);
 ```
 
-### Modify default configs
+### 修改默认文案
 
-Use `Locale.add` method to modify the default configs.
+通过 `Locale.add` 方法可以实现文案的修改和扩展，示例如下：
 
 ```js
 import { Locale } from 'mone';
 
 const messages = {
-  'en-US': {
+  'zh-CN': {
     vanPicker: {
-      confirm: 'Close'
+      confirm: '关闭' // 将'确认'修改为'关闭'
     }
   }
 };
@@ -33,17 +33,14 @@ const messages = {
 Locale.add(messages);
 ```
 
-### Config files
+### 配置文件
 
-Current supported languages:
+目前支持的语言:
 
-| Language | Filename |
+| 语言 | 文件名 |
 |------|------|
-| Chinese | zh-CN |
-| Traditional Chinese (HK) | zh-HK |
-| Traditional Chinese (TW) | zh-TW |
-| English | en-US |
-| Turkish | tr-TR |
-| Spanish (Spain) | es-ES |
+| 简体中文 | zh-CN |
+| 英语 | en-US |
 
-> View all language configs [Here](https://github.com/jczzq/mone/tree/dev/src/locale/lang).
+> 在 [这里](https://github.com/jczzq/mone/tree/dev/src/locale/lang) 查看所有的 i18n 配置文件。
+
