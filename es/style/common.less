@@ -1,0 +1,92 @@
+@import './var';
+
+.cp {
+  cursor: pointer;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+.word-break-all {
+  word-break: break-all;
+}
+
+.text- {
+  &right {
+    text-align: right;
+  }
+  &left {
+    text-align: left;
+  }
+  &center {
+    text-align: center;
+  }
+}
+.pull- {
+  &right {
+    float: right;
+  }
+  &left {
+    float: left;
+  }
+  &center {
+    display: inline-block;
+    margin: 0 auto;
+  }
+}
+
+.loop(@i) when (@i <= 5) {
+  .m- {
+    &@{i} {
+      margin: (@i * 4px);
+    }
+    &t-@{i} {
+      margin-top: (@i * 4px);
+    }
+    &b-@{i} {
+      margin-bottom: (@i * 4px);
+    }
+    &l-@{i} {
+      margin-left: (@i * 4px);
+    }
+    &r-@{i} {
+      margin-right: (@i * 4px);
+    }
+  }
+  .p- {
+    &@{i} {
+      padding: (@i * 4px);
+    }
+    &t-@{i} {
+      padding-top: (@i * 4px);
+    }
+    &b-@{i} {
+      padding-bottom: (@i * 4px);
+    }
+    &l-@{i} {
+      padding-left: (@i * 4px);
+    }
+    &r-@{i} {
+      padding-right: (@i * 4px);
+    }
+  }
+  .loop(@i+1);
+}
+.loop(1);
+
+.round {
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.va-middle {
+  vertical-align: middle;
+}
