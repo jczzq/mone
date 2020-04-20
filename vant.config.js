@@ -83,12 +83,12 @@ module.exports = {
             ]
           },
           {
-            title: '业务组件',
+            title: '抽象类',
             icon: 'other-pay',
             items: [
               {
-                path: 'address-edit',
-                title: 'AddressEdit 地址编辑'
+                path: 'model',
+                title: '视图状态'
               }
             ]
           }
