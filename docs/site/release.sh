@@ -1,8 +1,8 @@
 #!/usr/bin/env sh
 vant-cli build-site
 
-superman-cdn /vant ./site/*.js
+# cdn deploy
 
-rm -rf site/*.js
+# rm -rf site/*.js
 
 gh-pages -d site --add

@@ -1,0 +1,25 @@
+{
+  "type": "aliyun",
+  "log": true,
+  "deploy": {
+    "directories": [
+      {
+        "from": "../site",
+        "to": "./mone"
+      }
+    ],
+    "files": []
+  },
+  "noCache": {
+    "fileSuffix": ["html"],
+    "fileName": ["service-worker.js"]
+  },
+  "lastUpload": {
+    "fileSuffix": ["html"],
+    "fileName": []
+  },
+  "ignore": {
+    "fileSuffix": [],
+    "fileName": [".DS_Store"]
+  }
+}
