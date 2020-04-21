@@ -17,7 +17,10 @@ export default class IOCWebPage {
         this.gutter = data.gutter;
         this.views = IOCWebView.inbox(data.views) || [];
         // 当前页面所有出现的视图总数，自增ID
-        this.viewNo = Math.max.apply(Math, [...this.views.map(x => x.viewKey), this.views.length]);
+        this.viewNo = Math.max.apply(Math, [
+            ...this.views.map(x => x.viewKey),
+            this.views.length
+        ]);
         this.dict = data.dict || [];
 
         // 视图数组转换为树结构
@@ -47,28 +50,28 @@ export default class IOCWebPage {
             return (a.sort || 0) - (b.sort || 0);
         });
     }
-  static Rules = {
-      appId: [{ required: true, message: '请选择所属系统' }],
-      title: [{ required: true, message: '请输入标题' }]
-  };
-  // 处理IOCWebPage对象 为 接口参数
-  format() {
-      const tmp = JSON.parse(JSON.stringify({ ...this }));
-      tmp.views = viewTree2List(tmp.views);
-      for (const view of tmp.views) {
-      // 序列化
-          view.attrs = view.attrs ? JSON.stringify(view.attrs) : void 0;
-      }
-      return tmp;
-  }
-  // 清除标识
-  clearID() {
-      delete this.appId;
-      delete this.pageKey;
-  }
-  set(prop, val) {
-      if (prop) {
-          this[prop] = val;
-      }
-  }
+    static Rules = {
+        appId: [{ required: true, message: '请选择所属系统' }],
+        title: [{ required: true, message: '请输入标题' }]
+    };
+    // 处理IOCWebPage对象 为 接口参数
+    format() {
+        const tmp = JSON.parse(JSON.stringify({ ...this }));
+        tmp.views = viewTree2List(tmp.views);
+        for (const view of tmp.views) {
+            // 序列化
+            view.attrs = view.attrs ? JSON.stringify(view.attrs) : void 0;
+        }
+        return tmp;
+    }
+    // 清除标识
+    clearID() {
+        delete this.appId;
+        delete this.pageKey;
+    }
+    set(prop, val) {
+        if (prop) {
+            this[prop] = val;
+        }
+    }
 }

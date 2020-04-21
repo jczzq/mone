@@ -1,4 +1,4 @@
-import Form from './src/main';
+import Form from './src/main.vue';
 
 Form.install = function(Vue) {
     if (Form.installed) return;

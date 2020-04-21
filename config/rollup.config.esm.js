@@ -9,9 +9,8 @@ module.exports = {
         format: 'es',
         // When export and export default are not used at the same time, set legacy to true.
         // legacy: true,
-        banner: common.banner,
+        banner: common.banner
     },
-    plugins: [
-        common.getCompiler()
-    ]
+    external: ['vue', 'axios'],
+    plugins: [common.getCompiler()]
 };
