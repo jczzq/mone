@@ -8,5 +8,4 @@ function Mone(options) {
 }
 
 initGlobalAPI(Mone);
-
 export default Mone;
