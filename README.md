@@ -1,51 +1,120 @@
-<p align="center">
-    <img alt="mone logo" src="docs/assets/logo.png" width="120" style="margin-bottom: 10px;">
-</p>
-<h3 align="center" style="margin: 30px 0 35px;">常用组件、公共样式、工具函数</h3>
+# [monel](https://github.com/jczzq/monel)
+[![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg)](https://github.com/yanhaijing/jslib-base)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jczzq/monel/blob/master/LICENSE)
+[![Build Status](https://travis-ci.org/jczzq/monel.svg?branch=master)](https://travis-ci.org/jczzq/monel)
+[![Coveralls](https://img.shields.io/coveralls/jczzq/monel.svg)](https://coveralls.io/github/jczzq/monel)
+[![npm](https://img.shields.io/badge/npm-0.1.0-orange.svg)](https://www.npmjs.com/package/monel)
+[![NPM downloads](http://img.shields.io/npm/dm/monel.svg?style=flat-square)](http://www.npmtrends.com/monel)
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/jczzq/monel.svg)](http://isitmaintained.com/project/jczzq/monel "Percentage of issues still open")
 
-## 特性
+最好用的 `JS|TS` 第三方库脚手架
 
-## 安装
+## :star: 特性
+
+- 支持ES6+或TypeScript编写源码，编译生成生产代码
+- 多环境支持（支持浏览器原生，支持AMD，CMD，支持Webpack，Rollup，fis等，支持Node）
+- 集成[jsmini](https://github.com/jsmini)
+
+> 注意: 如果不同时使用 `export` 与 `export default` 可打开 `legacy模式`，`legacy模式` 下的模块系统可以兼容 `ie6-8`，见rollup配置文件
+
+## :pill: 兼容性
+单元测试保证支持如下环境：
+
+| IE   | CH   | FF   | SF   | OP   | IOS  | Android   | Node  |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ----- |
+| 6+   | 29+ | 55+  | 9+   | 50+  | 9+   | 4+   | 4+ |
+
+**注意：编译代码依赖ES5环境，对于ie6-8需要引入[es5-shim](http://github.com/es-shims/es5-shim/)才可以兼容，可以查看[demo/demo-global.html](./demo/demo-global.html)中的例子**
+
+## :open_file_folder: 目录介绍
+
+```
+.
+├── demo 使用demo
+├── dist 编译产出代码
+├── doc 项目文档
+├── src 源代码目录
+├── test 单元测试
+├── CHANGELOG.md 变更日志
+└── TODO.md 计划功能
+```
+
+## :rocket: 使用者指南
+
+通过npm下载安装代码
 
 ```bash
-# 通过 npm 安装
-npm i mone -S
-
-# 通过 yarn 安装
-yarn add mone
+$ npm install --save monel
 ```
 
-## 快速上手
+如果你是node环境
 
 ```js
-import Vue from 'vue';
-import { Button } from 'mone';
-import 'mone/lib/index.css';
-
-Vue.use(Button);
+var base = require('monel');
 ```
 
-mone 也支持按需引入、CDN 引入等方式，详细说明见 [快速上手](https://jczzq.github.io/mone#/zh-CN/quickstart).
+如果你是webpack等环境
 
-## 贡献代码
+```js
+import base from 'monel';
+```
 
-修改代码请阅读我们的 [开发指南](https://jczzq.github.io/mone/#/zh-CN/contribution)。
+如果你是requirejs环境
 
-使用过程中发现任何问题都可以提 [Issue](https://github.com/jczzq/mone/issues) 给我们，当然，我们也非常欢迎你给我们发 [PR](https://github.com/jczzq/mone/pulls)。
+```js
+requirejs(['node_modules/monel/dist/index.aio.js'], function (base) {
+    // xxx
+})
+```
 
-## 浏览器支持
+如果你是浏览器环境
 
-现代浏览器以及 IE10+.
+```html
+<script src="node_modules/monel/dist/index.aio.js"></script>
+```
 
-## 链接
+## :bookmark_tabs: 文档
+[API](./doc/api.md)
 
-- [详细文档](https://jczzq.github.io/mone)
-- [更新日志](https://jczzq.github.io/mone#/zh-CN/changelog)
+## :kissing_heart: 贡献者指南
+首次运行需要先安装依赖
 
-## 开源协议
+```bash
+$ npm install
+```
 
-本项目基于 [MIT](https://zh.wikipedia.org/wiki/MIT%E8%A8%B1%E5%8F%AF%E8%AD%89) 协议，请自由地享受和参与开源。
+一键打包生成生产代码
 
-本项目使用 [vant-cli](https://github.com/jczzq/mone/tree/dev/packages/vant-cli) 搭建
+```bash
+$ npm run build
+```
 
-"pre-commit": "lint-staged",
+运行单元测试:
+
+```bash
+$ npm test
+```
+
+> 注意：浏览器环境需要手动测试，位于`test/browser`
+
+修改 package.json 中的版本号，修改 README.md 中的版本号，修改 CHANGELOG.md，然后发布新版
+
+```bash
+$ npm run release
+```
+
+将新版本发布到npm
+
+```bash
+$ npm publish
+```
+
+## 贡献者列表
+
+[contributors](https://github.com/jczzq/monel/graphs/contributors)
+
+## :gear: 更新日志
+[CHANGELOG.md](./CHANGELOG.md)
+
+## :airplane: 计划列表
+[TODO.md](./TODO.md)

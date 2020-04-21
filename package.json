@@ -1,105 +1,64 @@
 {
-  "name": "mone",
-  "version": "0.0.1",
-  "description": "A business toolkit based on vue and element-ui",
-  "main": "lib/index.js",
-  "module": "es/index.js",
-  "style": "lib/index.css",
-  "typings": "types/index.d.ts",
-  "files": [
-    "es",
-    "lib"
-  ],
+  "name": "monel",
+  "version": "0.1.0",
+  "description": "jslib最好用的js库脚手架",
+  "main": "dist/index.js",
+  "jsnext:main": "dist/index.esm.js",
+  "module": "dist/index.esm.js",
+  "sideEffects": false,
   "scripts": {
-    "dev": "vant-cli dev",
-    "test": "vant-cli test",
-    "lint": "vant-cli lint",
-    "build": "vant-cli build",
-    "release": "vant-cli release",
-    "build-site": "vant-cli build-site",
-    "changelog": "vant-cli changelog",
-    "test:watch": "vant-cli test --watch",
-    "release:site": "vant-cli build-site && gh-pages -d site",
-    "test:coverage": "open test/coverage/index.html"
+    "clean": "rimraf ./dist",
+    "test": "npm run lint && cross-env NODE_ENV=test nyc mocha",
+    "release": "npm test && npm run build && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags",
+    "lint": "eslint -c .eslintrc.js src",
+    "lint:fix": "eslint --fix -c .eslintrc.js src --fix",
+    "build:self": "rollup -c config/rollup.config.js",
+    "build:esm": "rollup -c config/rollup.config.esm.js",
+    "build:aio": "rollup -c config/rollup.config.aio.js",
+    "build:aio.min": "cross-env NODE_ENV=production npm run build:aio",
+    "build": "npm run clean && npm run build:self && npm run build:esm && npm run build:aio && npm run build:aio.min",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "vant-cli commit-lint"
-    }
-  },
-  "lint-staged": {
-    "*.{ts,tsx,js,jsx,vue}": [
-      "eslint --fix",
-      "git add"
-    ],
-    "*.{vue,css,less,scss}": [
-      "stylelint --fix",
-      "git add"
-    ]
-  },
-  "eslintConfig": {
-    "root": true,
-    "extends": [
-      "@vant"
-    ],
-    "rules": {
-      "import/no-mutable-exports": 0,
-      "@typescript-eslint/no-empty-function": 0,
-      "prefer-rest-params": 0,
-      "no-prototype-builtins": 0,
-      "lines-between-class-members": 0,
-      "max-classes-per-file": 0,
-      "linebreak-style": 0,
-      "comma-dangle": 0
-    }
-  },
-  "stylelint": {
-    "extends": [
-      "@vant/stylelint-config"
-    ]
-  },
-  "prettier": {
-    "singleQuote": true,
-    "printWidth": 120
-  },
-  "browserslist": [
-    "IE 10",
-    "Android >= 4.0",
-    "iOS >= 7"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jczzq/mone.git"
-  },
-  "keywords": [
-    "vue",
-    "vue-component"
-  ],
   "author": "jczzq",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jczzq/monel.git"
+  },
   "bugs": {
-    "url": "https://github.com/jczzq/mone/issues"
+    "url": "https://github.com/jczzq/monel/issues"
   },
-  "homepage": "https://github.com/jczzq/mone#readme",
-  "devDependencies": {
-    "@vant/cli": "^2.1.0",
-    "vue": "^2.6.11",
-    "vue-template-compiler": "^2.6.11",
-    "vant": "^2.5.9"
-  },
-  "sideEffects": [
-    "es/**/style/*",
-    "lib/**/style/*",
-    "*.css",
-    "*.less"
+  "files": [
+    "/dist",
+    "*.d.ts"
   ],
-  "dependencies": {
-    "@babel/runtime": "7.x",
-    "@vant/icons": "1.2.0",
-    "@vue/babel-helper-vue-jsx-merge-props": "^1.0.0",
-    "vue-lazyload": "1.2.3"
+  "engines": {
+    "node": ">= 0.12.0"
   },
-  "peerDependencies": {
-    "vue": ">= 2.5.22"
+  "devDependencies": {
+    "@js-lib/cli": "^1.6.0",
+    "cross-env": "5.2.0",
+    "rimraf": "2.6.2",
+    "es5-shim": "4.5.10",
+    "eslint": "^5.15.1",
+    "@babel/cli": "7.1.5",
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "rollup": "0.57.1",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-commonjs": "8.3.0",
+    "rollup-plugin-node-resolve": "3.0.3",
+    "rollup-plugin-uglify": "1.0.0",
+    "@babel/register": "7.0.0",
+    "babel-plugin-istanbul": "5.1.0",
+    "coveralls": "3.0.2",
+    "expect.js": "0.3.1",
+    "mocha": "3.5.3",
+    "nyc": "13.1.0",
+    "source-map-support": "0.5.9"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.1.2"
   }
 }

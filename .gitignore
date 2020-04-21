@@ -13,7 +13,6 @@ package-lock.json
 # lib
 dist
 /site
-deploy-config/aliyun/
 changelog.generated.md
 test/coverage
 vetur
