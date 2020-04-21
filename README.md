@@ -47,3 +47,5 @@ mone 也支持按需引入、CDN 引入等方式，详细说明见 [快速上手
 本项目基于 [MIT](https://zh.wikipedia.org/wiki/MIT%E8%A8%B1%E5%8F%AF%E8%AD%89) 协议，请自由地享受和参与开源。
 
 本项目使用 [vant-cli](https://github.com/jczzq/mone/tree/dev/packages/vant-cli) 搭建
+
+"pre-commit": "lint-staged",
