@@ -16,7 +16,7 @@ export default {
       return;
     }
     const {
-      // IOCWeb 属性
+      // Mone 属性
       viewKey,
       attrs = {},
       props = {},

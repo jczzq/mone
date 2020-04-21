@@ -1,4 +1,4 @@
-import { MoneParameter } from './ViewState';
+import { MoneParameter } from '../ViewState';
 
 const aa = new MoneParameter({
   page: {
