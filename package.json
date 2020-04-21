@@ -19,7 +19,7 @@
     "build-site": "vant-cli build-site",
     "changelog": "vant-cli changelog",
     "test:watch": "vant-cli test --watch",
-    "release:site": "sh docs/site/release.sh",
+    "release:site": "vant-cli build-site && gh-pages -d site",
     "test:coverage": "open test/coverage/index.html"
   },
   "husky": {

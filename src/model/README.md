@@ -27,3 +27,15 @@ class ListView extends CommonView {
   async load(): Promise<any>;
 }
 ```
+
+### MoneParameter 提交参数
+
+```ts
+class MoneParameter {
+  sort?: ParameterSort | ParameterSort[];
+  page?: {};
+  query: any;
+  constructor(data?);
+  format?(): void;
+}
+```
